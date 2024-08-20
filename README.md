@@ -28,6 +28,12 @@
 npx create-next-app
 ```
 
+หากขึ้น error npm ให้ทำการอัพเดท npm โดยใช้คำสั่ง
+
+```bash
+npm update -g npm
+```
+
 ให้ตอบคำถามต่างๆ ดังนี้:
 
 - What is your project named? (ชื่อโปรเจค): `learn-todo
@@ -37,6 +43,24 @@ npx create-next-app
 - Would you like to use `src/` directory? (ใช้ไดเร็กทอรี `src/` หรือไม่?): `Yes`
 - Would you like to use App Router? (ใช้ App Router หรือไม่?): `Yes`
 - Would you like to customize the default import alias (@/\*)? (ต้องการแก้ไขการนำเข้าค่าเริ่มต้นหรือไม่?): `No`
+
+ทำการ cd เข้าไปในโปรเจคที่สร้างขึ้น
+
+```bash
+cd learn-todo
+```
+
+เปิดโปรเจคด้วย Visual Studio Code
+
+```bash
+code .
+```
+
+ทำการรันโปรเจคด้วยคำสั่ง
+
+```bash
+npm run dev
+```
 
 ### 3. เตรียม Mock API
 
@@ -361,7 +385,7 @@ export default function Home() {
 
 ```typescript
 // src/app/index.tsx
-'use client';
+"use client";
 
 export default function Home() {
   const api_url = "https://66c1e58bf83fffcb587a8c03.mockapi.io/todo";
@@ -457,7 +481,7 @@ export default function Home() {
 
 ## ขอบคุณ
 
-ขอบคุณที่ติดตามคลาสนี้จากเริ่มจนจบ หวังว่าคุณจะได้รับความรู้และประสบการณ์ที่ดีจากคลาสนี้ 
+ขอบคุณที่ติดตามคลาสนี้จากเริ่มจนจบ หวังว่าคุณจะได้รับความรู้และประสบการณ์ที่ดีจากคลาสนี้
 
 ## License
 

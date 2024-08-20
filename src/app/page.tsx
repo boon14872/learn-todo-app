@@ -73,6 +73,7 @@ export default function Home() {
             <span className="text-lg font-medium text-gray-800">
               {todo.title}
             </span>
+
             <button
               className="text-red-500 hover:text-red-600 transition-colors duration-200"
               onClick={() => deleteTodo(todo.id)}
