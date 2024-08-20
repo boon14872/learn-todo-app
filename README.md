@@ -87,10 +87,10 @@ export interface Todo {
 
 <!-- ทำการลบข้อมูลทั้งหมดใน page.ts ให้เหลือดังต่อไปนี้ -->
 
-- ลบข้อมูลทั้งหมดในไฟล์ `src/app/index.tsx` ให้เหลือดังต่อไปนี้
+- ลบข้อมูลทั้งหมดในไฟล์ `src/app/page.tsx` ให้เหลือดังต่อไปนี้
 
 ```typescript
-// pages/index.tsx
+// src/app/page.tsx
 export default function Home() {
   return <main></main>;
 }
@@ -111,10 +111,10 @@ export default function Home() {
 
 <!-- ทำการออกแบบหน้าตาเว็บด้วย html + tailwind ในหน้าหลัก -->
 
-- ออกแบบหน้าตาเว็บด้วย HTML และ Tailwind CSS ในไฟล์ `src/app/index.tsx` ดังต่อไปนี้ ตอนแรกเราจะสร้างฟอร์มเพื่อให้ผู้ใช้งานสามารถเพิ่ม Todo ได้
+- ออกแบบหน้าตาเว็บด้วย HTML และ Tailwind CSS ในไฟล์ `src/app/page.tsx` ดังต่อไปนี้ ตอนแรกเราจะสร้างฟอร์มเพื่อให้ผู้ใช้งานสามารถเพิ่ม Todo ได้
 
 ```typescript
-// src/app/index.tsx
+// src/app/page.tsx
 export default function Home() {
   return (
     <main>
@@ -136,10 +136,10 @@ export default function Home() {
 }
 ```
 
-- ในไฟล์ `src/app/index.tsx` ให้เพิ่มส่วนของการแสดงรายการ Todo ดังต่อไปนี้
+- ในไฟล์ `src/app/page.tsx` ให้เพิ่มส่วนของการแสดงรายการ Todo ดังต่อไปนี้
 
 ```typescript
-// src/app/index.tsx
+// src/app/page.tsx
 export default function Home() {
   return (
     <main>
@@ -186,7 +186,7 @@ export default function Home() {
 - ใน Next.js จะถูกกำหนดให้เป็น server side rendering โดยค่าเริ่มต้น แต่ถ้าต้องการใช้ client side rendering ให้ใส่ 'use client' ในด้านบนของไฟล์ที่ต้องการใช้ client side rendering
 
 ```typescript
-// src/app/index.tsx
+// src/app/page.tsx
 'use client';
 
 export default function Home() {
@@ -201,7 +201,7 @@ export default function Home() {
 ### การเรียกใช้ API ใน Next.js
 
 ```typescript
-// src/app/index.tsx
+// src/app/page.tsx
 export default function Home() {
    // กำหนด URL ของ API ที่ได้จากการสร้าง Mock API ใน MockAPI.io
   const api_url = "https://66c1e58bf83fffcb587a8c03.mockapi.io/todo";
@@ -212,7 +212,7 @@ export default function Home() {
 - ใน Next.js สามารถใช้ `fetch` ในการเรียกใช้ API ได้โดยตรง ในตัวอย่างนี้เราจะใช้ `fetch` ในการเรียกใช้ API ที่เราสร้างขึ้น
 
 ```typescript
-// src/app/index.tsx
+// src/app/page.tsx
 export default function Home() {
   const api_url = "https://66c1e58bf83fffcb587a8c03.mockapi.io/todo";
 
@@ -253,7 +253,7 @@ useEffect(() => {
 - ในตัวอย่างนี้เราจะแสดงข้อมูลที่ได้จาก API ในรูปแบบของรายการ Todo โดยใช้ `map` ในการวนลูปข้อมูลที่ได้จาก API
 
 ```typescript
-// src/app/index.tsx
+// src/app/page.tsx
 export default function Home() {
   const api_url = "https://66c1e58bf83fffcb587a8c03.mockapi.io/todo";
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -301,7 +301,7 @@ export default function Home() {
 - ในตัวอย่างนี้เราจะเพิ่มฟังก์ชัน `addTodo` เพื่อเพิ่ม Todo โดยใช้ `fetch` ในการส่งข้อมูลไปยัง API
 
 ```typescript
-// src/app/index.tsx
+// src/app/page.tsx
 
 export default function Home() {
   const api_url = "https://66c1e58bf83fffcb587a8c03.mockapi.io/todo";
@@ -384,7 +384,7 @@ export default function Home() {
 - ในตัวอย่างนี้เราจะเพิ่มฟังก์ชัน `deleteTodo` เพื่อลบ Todo โดยใช้ `fetch` ในการส่งข้อมูลไปยัง API
 
 ```typescript
-// src/app/index.tsx
+// src/app/page.tsx
 "use client";
 
 export default function Home() {
